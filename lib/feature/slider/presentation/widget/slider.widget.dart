@@ -29,7 +29,8 @@ class _SliderWidgetState extends State<SliderWidget> {
   Widget build(BuildContext context) {
     return BlocConsumer<SliderCubit, SliderState>(
         builder: (context, state) {
-          if (state is SliderLoadingState) {
+          // remove comment in case of firebase use only 1GB per day
+          /*   if (state is SliderLoadingState) {
             return const CircularProgressIndicator(
               color: Colors.blueAccent,
             );
@@ -41,14 +42,29 @@ class _SliderWidgetState extends State<SliderWidget> {
                 enableInfiniteScroll: false,
                 viewportFraction: 1.0,
               ),
-              items: state.sliderListEntity!.sliderListEntity!.map((item) {
+              items: videos.map((item) {
                 return VideoWidget(
                   videoUrl: item,
                 );
               }).toList(),
             );
-          }
-          return Container();
+          } */
+          return CarouselSlider(
+            options: CarouselOptions(
+              height: double.infinity,
+              scrollDirection: Axis.vertical,
+              enableInfiniteScroll: false,
+              viewportFraction: 1.0,
+            ),
+            items: videos.map((item) {
+              return Container(
+                decoration: const BoxDecoration(color: Color(0xFF141518)),
+                child: VideoWidget(
+                  videoUrl: item,
+                ),
+              );
+            }).toList(),
+          );
         },
         listener: (context, state) {});
   }

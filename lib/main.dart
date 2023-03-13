@@ -22,13 +22,14 @@ class App extends StatelessWidget {
     return const MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      home: VideoPage(),
+      home: HomePage(),
+      color: Color(0xFF141518),
     );
   }
 }
 
-class VideoPage extends StatelessWidget {
-  const VideoPage({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
