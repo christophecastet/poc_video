@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "476041552524",
+    "project_id": "pocvideo-dfc1a",
+    "storage_bucket": "pocvideo-dfc1a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476041552524:android:e656d9a5ee734b43c0d1a9",
+        "android_client_info": {
+          "package_name": "com.example.poc_video"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476041552524-eror9pkc0glsoh3s157kjrqlt2ti2jh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjMg243mU5hW1AxwgrUspzNlxA9-8_PbA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476041552524-eror9pkc0glsoh3s157kjrqlt2ti2jh2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:476041552524:android:050c1f8835eb5ac4c0d1a9",
+        "android_client_info": {
+          "package_name": "com.itso.pocvideo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "476041552524-eror9pkc0glsoh3s157kjrqlt2ti2jh2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjMg243mU5hW1AxwgrUspzNlxA9-8_PbA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "476041552524-eror9pkc0glsoh3s157kjrqlt2ti2jh2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
