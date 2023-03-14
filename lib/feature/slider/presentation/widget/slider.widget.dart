@@ -2,7 +2,7 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:poc_video/feature/slider/presentation/cubit/slider.cubit.dart';
-import 'package:poc_video/feature/video/presentation/widget/video.widget.dart';
+import 'package:poc_video/feature/video/video_player/presentation/widget/video.widget.dart';
 
 class SliderWidget extends StatefulWidget {
   const SliderWidget({super.key});
