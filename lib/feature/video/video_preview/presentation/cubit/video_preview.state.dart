@@ -19,11 +19,11 @@ class VideoPreviewLoadingState extends VideoPreviewState {
 }
 
 class VideoPreviewLoadedState extends VideoPreviewState {
-  final dynamic sliderListEntity;
-  const VideoPreviewLoadedState(this.sliderListEntity);
+  final dynamic result;
+  const VideoPreviewLoadedState(this.result);
 
   @override
-  List<Object> get props => [sliderListEntity!];
+  List<Object> get props => [result!];
 }
 
 class VideoPreviewErrorState extends VideoPreviewState {

@@ -68,6 +68,8 @@ class AddVideo extends StatelessWidget {
                   }
                 },
                 child: const Text('Prendre une vidéo')),
+
+            /// not implemented
             ElevatedButton(
                 onPressed: () async {
                   XFile? file =

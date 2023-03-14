@@ -9,13 +9,10 @@ import 'package:video_compress/video_compress.dart';
 class VideoPreviewFirebase {
   Future<dynamic> postVideo(MediaInfo? videoPreview) async {
     try {
-/*         final storageRef = FirebaseStorage.instance.ref();
-      final mountainsRef = storageRef.child(fileName);
-      final mountainImagesRef = storageRef.child("files/$fileName");
-      assert(mountainsRef.name == mountainImagesRef.name);
-      assert(mountainsRef.fullPath != mountainImagesRef.fullPath);
-      
-      await mountainsRef.putFile(videoPreview.file);  */
+      final storageRef = FirebaseStorage.instance.ref('files');
+      final mountainsRef = storageRef.child(videoPreview!.title!);
+
+      await mountainsRef.putFile(videoPreview.file!);
       return 1;
     } catch (e) {
       rethrow;

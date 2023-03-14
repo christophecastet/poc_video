@@ -4,7 +4,8 @@ import 'package:video_player/video_player.dart';
 
 class VideoWidget extends StatefulWidget {
   final String videoUrl;
-  const VideoWidget({super.key, required this.videoUrl});
+  final String? target;
+  const VideoWidget({super.key, required this.videoUrl, this.target});
 
   @override
   State<VideoWidget> createState() => _VideoWidgetState();
@@ -15,16 +16,28 @@ class _VideoWidgetState extends State<VideoWidget> {
   @override
   void initState() {
     super.initState();
-    // change asset or network according to video origin
-    controller = VideoPlayerController.asset(
-      widget.videoUrl,
-    )
-      /* ..addListener(() => setState(() {})) */
-      ..setLooping(true)
-      ..initialize().then((_) {
-        controller.play();
-        controller.setPlaybackSpeed(1);
-      });
+
+    if (widget.target == 'local') {
+      controller = VideoPlayerController.asset(
+        widget.videoUrl,
+      )
+        /* ..addListener(() => setState(() {})) */
+        ..setLooping(true)
+        ..initialize().then((_) {
+          controller.play();
+          controller.setPlaybackSpeed(1);
+        });
+    } else {
+      controller = VideoPlayerController.network(
+        widget.videoUrl,
+      )
+        /* ..addListener(() => setState(() {})) */
+        ..setLooping(true)
+        ..initialize().then((_) {
+          controller.play();
+          controller.setPlaybackSpeed(1);
+        });
+    }
   }
 
   @override

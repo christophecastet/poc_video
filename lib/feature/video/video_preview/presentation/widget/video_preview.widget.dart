@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:poc_video/feature/bottom_app_bar/widget/bottom_app_bar.widget.dart';
 import 'package:poc_video/feature/video/video_preview/presentation/cubit/video_preview.cubit.dart';
+import 'package:poc_video/main.dart';
 import 'package:video_compress/video_compress.dart';
 
 import 'package:video_player/video_player.dart';
@@ -44,6 +45,12 @@ class _VideoPreviewState extends State<VideoPreview> {
         // TODO: implement listener
       },
       builder: (context, state) {
+        if (state is VideoPreviewLoadedState) {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const HomePage()),
+          );
+        }
         return Scaffold(
             bottomNavigationBar: const BottomAppBarWidget(),
             body: Center(
